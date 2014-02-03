@@ -4,8 +4,8 @@ A quick-and-dirty **Sublime Text 3** plugin to run HTML5 Tidy on a file.
 
 ## Installation
 
-1. Git: Clone the repo into your packages folder
-2. Archive copy the downloaded file into you packages folder, changing the extension to `.sublime-package`
+1. *Git*: Clone the repo into your packages folder
+2. *Archive*: copy the downloaded file into you packages folder, changing the extension to `.sublime-package`
 
 ## Configuration
 

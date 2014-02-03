@@ -17,28 +17,25 @@ class html5_tidy(sublime_plugin.TextCommand):
                 # save the current buffer
         
         # the tidy command
-        commandName = settings.get("cmd")
+        command_name = settings.get("cmd")
         # things like -m or -indent
         switches = "-"+ ''.join(settings.get('switches'))
         # additional options like --show-only-body 1
         config_options = ' '.join(["--" + key + " " + str(value) for key, value in settings.get('config').items()])
         # the current buffer file name
-        fileName = self.view.file_name()
+        file_name = self.view.file_name()
 
-        tidyCommand = " ".join([commandName, switches, config_options, fileName])
+        tidy_command = " ".join([command_name, switches, config_options, file_name])
 
         cmd = ShellCommand()
-        result = cmd.execute(tidyCommand)
-
-        messages = []
+        result = cmd.execute(tidy_command)
 
         if settings.get("output_to_console") == True:
             for line in result.splitlines():
                 print(line)
 
-# snagged this from PHPcs
+# snagged this from PHPcs plugin
 class ShellCommand():
-    """Base class for shelling out a command to the terminal"""
     def execute(self, cmd):
         data = None
 
