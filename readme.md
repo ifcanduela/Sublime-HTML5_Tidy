@@ -17,6 +17,16 @@ The config file has three keys to configure Tidy:
 
 The plugin has only a few configuration settings:
 
-
 - `output_to_console`: The output of the Tidy command will be printed to the Sublime console.
 - `save_before_tidy`: Force the current buffer to be saved to disk before running Tidy on it.
+
+## Usage
+
+Press `Ctrl+Shift+P`, start typing *HTML5 Tidy* until the command appears, select it and press *Enter*.
+
+You can bind a key to it with this snippet in your key-bindings file:
+
+    {
+        "keys": ["ctrl+shift+t"],
+        "command": "html5_tidy"
+    }

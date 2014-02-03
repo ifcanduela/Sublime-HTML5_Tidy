@@ -11,10 +11,9 @@ class html5_tidy(sublime_plugin.TextCommand):
         # fetch the settings dictionary
         settings = sublime.load_settings('HTML5_Tidy.sublime-settings')
 
-        if self.view.is_dirty():
-            if settings.get("save_before_tidy") == True:
-                self.view.run_command("save")
-                # save the current buffer
+        if self.view.is_dirty() and settings.get("save_before_tidy") == True:
+            # save the current buffer
+            self.view.run_command("save")
         
         # the tidy command
         command_name = settings.get("cmd")
