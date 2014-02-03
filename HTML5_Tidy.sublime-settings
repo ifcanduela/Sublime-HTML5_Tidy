@@ -1,0 +1,46 @@
+{
+    // binary name (must be on PATH)
+    "cmd": "tidy",
+
+    // command-line options
+    "switches": ["m", "q", "i"],
+
+    // config settings
+    "config": {
+        // encoding for input and ouput
+        "char-encoding": "utf8",
+        // "input-encoding": "utf8",
+        // "output-encoding": "utf8",
+        
+        // optional DOCTYPE (html5/auto/omit)
+        "doctype": "omit",
+
+        // indentation size
+        "indent-spaces": 4,
+
+        // output only the content of the body tag
+        "show-body-only": 0,
+
+        // prefix output with warning report
+        "show-warnings": 0,
+        
+        // Insert a <meta generator> tag
+        "tidy-mark": 0,
+
+        // add additional line breaks
+        "vertical-space": 1,
+
+        // wrap long lines
+        "wrap": 0,
+    },
+
+    // if you remove the -m switch above, this is 
+    // the only way to get the result of the tidy command
+    "output_to_console": false,
+
+    // save buffer before running commmand
+    // useful because tidy works with files on disk
+    // if this is false, the last saved version of a buffer
+    // will be processed
+    "save_before_tidy": true,
+}
